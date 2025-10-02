@@ -1633,6 +1633,11 @@ section,
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .pricing .pricing-item h3 {
@@ -1669,6 +1674,8 @@ section,
   text-align: center;
   line-height: 20px;
   font-size: 14px;
+  flex-grow: 1; /* pushes the Buy Now button down evenly */
+
 }
 
 .pricing .pricing-item ul li {
@@ -1691,6 +1698,7 @@ section,
   margin: 0 -20px -20px -20px;
   padding: 20px 15px;
   text-align: center;
+   margin-top: auto; /* keeps Buy Now aligned at bottom */
 }
 
 .pricing .btn-buy {
