@@ -564,6 +564,13 @@ h6 {
   font-size: 13px;
 }
 
+/* Shift "Our Services" column slightly right (responsive) */
+.footer .footer-top .row > div:nth-child(3) {
+  margin-left: clamp(0px, 4vw, 70px);
+}
+
+
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -1177,16 +1184,17 @@ section,
   background-color: var(--surface-color);
   color: var(--accent-color);
   margin: 0 auto;
-  width: 150px;         /* adjust as you want */
-  height: 150px;        /* keep both same for square */
-  border-radius: 10px;  /* optional for soft corners */
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;     /* important: hides overflow */
+  overflow: hidden;
   margin-bottom: 20px;
-  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 25px rgba(0,0,0,0.1);
   transition: ease-in-out 0.3s;
+  flex: 0 0 auto; 
 }
 
 /* This part ensures image scales properly */
@@ -1233,6 +1241,101 @@ section,
   color: var(--accent-color);
 }
 
+/* --- Service section --- */
+.service-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-img img {
+  width: 100%;
+  height: 300px;      /* same size for all */
+  object-fit: fill;
+  border-bottom: 3px solid #ff6fa1; /* blue accent */
+}
+
+.service-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ff6fa1;
+  margin: 15px 20px 10px;
+  text-align: center;
+}
+
+.service-item p {
+  color: #444;
+  font-size: 15px;
+  margin: 0 20px 15px;
+}
+
+/* Ensure inner text and button layout behave well */
+.services .service-item .learn-more-btn {
+  margin-top: auto;        /* pushes button down */
+  align-self: center;      /* centers it horizontally (optional) */
+}
+
+.learn-more-btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* text color */
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  z-index: 1; /* ensures text is above pseudo-element */
+}
+
+.learn-more-btn:before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  border-radius: 30px;
+  border: 3px solid color-mix(in srgb, var(--accent-color), transparent 30%);
+  animation: pulsate-btn 2s infinite;
+  z-index: 0; /* behind text */
+}
+
+.learn-more-btn:hover:before {
+  animation: none;
+  border-color: var(--accent-color);
+}
+
+.learn-more-btn:hover {
+  transform: scale(1.05);
+  color: #fff; /* ensures text color stays visible */
+}
+
+/* pulsating animation */
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+}
 /*--------------------------------------------------------------
 # Appointment Section
 --------------------------------------------------------------*/
@@ -1437,77 +1540,6 @@ section,
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Doctors Section
---------------------------------------------------------------*/
-.doctors .team-member {
-  background-color: var(--surface-color);
-  overflow: hidden;
-  border-radius: 5px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  height: 100%;
-}
-
-.doctors .team-member .member-img {
-  position: relative;
-  overflow: hidden;
-}
-
-.doctors .team-member .social {
-  position: absolute;
-  left: 0;
-  bottom: 30px;
-  right: 0;
-  opacity: 0;
-  transition: ease-in-out 0.3s;
-  text-align: center;
-}
-
-.doctors .team-member .social a {
-  background: color-mix(in srgb, var(--contrast-color), transparent 25%);
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin: 0 3px;
-  border-radius: 4px;
-  width: 36px;
-  height: 36px;
-  transition: ease-in-out 0.3s;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.doctors .team-member .social a:hover {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-}
-
-.doctors .team-member .social i {
-  font-size: 18px;
-  line-height: 0;
-}
-
-.doctors .team-member .member-info {
-  padding: 25px 15px;
-}
-
-.doctors .team-member .member-info h4 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-
-.doctors .team-member .member-info span {
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
-
-.doctors .team-member:hover .social {
-  opacity: 1;
-  bottom: 15px;
 }
 
 /*--------------------------------------------------------------
@@ -1874,6 +1906,7 @@ section,
 
 .service-details .services-img {
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .service-details h3 {
@@ -1912,101 +1945,11 @@ section,
   color: #1977cc !important;
 }
 
-/* --- Service section --- */
-.service-item {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: all 0.3s ease;
-  text-align: left;
-}
 
-.service-item:hover {
-  transform: translateY(-5px);
-}
 
-.service-img img {
-  width: 100%;
-  height: 300px;      /* same size for all */
-  object-fit: fill;
-  border-bottom: 3px solid #ff6fa1; /* blue accent */
-}
 
-.service-item h3 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #ff6fa1;
-  margin: 15px 20px 10px;
-  text-align: center;
-}
 
-.service-item p {
-  color: #444;
-  font-size: 15px;
-  margin: 0 20px 15px;
-}
 
-/* Ensure inner text and button layout behave well */
-.services .service-item .learn-more-btn {
-  margin-top: auto;        /* pushes button down */
-  align-self: center;      /* centers it horizontally (optional) */
-}
-
-.learn-more-btn {
-  position: relative;
-  display: inline-block;
-  padding: 12px 30px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff; /* text color */
-  background-color: var(--accent-color);
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  z-index: 1; /* ensures text is above pseudo-element */
-}
-
-.learn-more-btn:before {
-  content: "";
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 120%;
-  height: 120%;
-  border-radius: 30px;
-  border: 3px solid color-mix(in srgb, var(--accent-color), transparent 30%);
-  animation: pulsate-btn 2s infinite;
-  z-index: 0; /* behind text */
-}
-
-.learn-more-btn:hover:before {
-  animation: none;
-  border-color: var(--accent-color);
-}
-
-.learn-more-btn:hover {
-  transform: scale(1.05);
-  color: #fff; /* ensures text color stays visible */
-}
-
-/* pulsating animation */
-@keyframes pulsate-btn {
-  0% {
-    transform: scale(0.9);
-    opacity: 0.6;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.2;
-  }
-  100% {
-    transform: scale(0.9);
-    opacity: 0.6;
-  }
-}
 
 
 /*--------------------------------------------------------------
