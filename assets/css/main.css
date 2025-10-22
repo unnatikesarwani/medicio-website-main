@@ -1944,8 +1944,47 @@ section,
 .branding .logo h4 strong {
   color: #1977cc !important;
 }
+/* ===== Responsive header + topbar layout fixes ===== */
+@media (max-width: 767.98px) {
+  /* Make topbar items visible and adjust layout */
+  .topbar .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 6px;
+  }
 
+  /* Ensure WhatsApp link goes to the right side */
+  .topbar .whatsapp-link {
+    margin-left: auto;
+  }
 
+  /* Keep branding spaced properly */
+  .branding .container {
+    justify-content: space-between !important;
+    align-items: center;
+  }
+
+  /* Push nav items to the right */
+  .navmenu {
+    margin-left: auto;
+  }
+
+  /* Hamburger menu at the top-right corner */
+  .mobile-nav-toggle {
+    position: absolute;
+    right: 16px;
+    top: 18px;
+    font-size: 28px;
+    color: white;
+  }
+
+  /* Ensure CTA button (like “Request Demo”) doesn’t overlap */
+  .cta-btn {
+    margin-right: 50px; /* leaves space for hamburger */
+  }
+}
 
 
 
