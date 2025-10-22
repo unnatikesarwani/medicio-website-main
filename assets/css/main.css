@@ -768,7 +768,22 @@ section,
     min-height: 100vh;
   }
 }
-
+@media (max-width:500px)
+{
+  #hero-carousel .carousel-indicators{
+    margin-bottom:170px;
+  }
+  #hero-carousel .carousel-item{
+    height:88vh;
+  }
+}
+@media (max-width:500px)
+{
+  #featured-services
+  {
+    margin-top:-70px;
+  }
+}
 .hero img {
   position: absolute;
   inset: 0;
