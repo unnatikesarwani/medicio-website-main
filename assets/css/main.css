@@ -564,8 +564,7 @@ h6 {
   font-size: 13px;
 }
 
-/* Shift "Our Services" column slightly right (responsive) */
-.footer .footer-top .row > div:nth-child(3) {
+.footer .footer-top .row {
   margin-left: clamp(0px, 4vw, 70px);
 }
 
