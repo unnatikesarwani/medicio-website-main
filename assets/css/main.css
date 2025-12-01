@@ -19,10 +19,10 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color:  #fff6fb; /* Background color for the entire website, including individual sections */
+  --background-color:  #f9f9fa; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #555555; /* Color for headings, subheadings and title throughout the website */
-  --accent-color:  #ff6fa1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color:  rgb(92, 157, 206); /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 
@@ -41,7 +41,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color:  #fff6fb;
+  --background-color:  #f9f9fa;
   --surface-color: #ffffff;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .accent-background {
-  --background-color: #ff6fa1;
+  --background-color: rgba(92, 157, 206);
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #fff6fb;
@@ -271,7 +271,7 @@ h6 {
 .header .cta-btn,
 .header .cta-btn:focus {
   color: #fff;
-  background: #ff6fa1;
+  background: rgb(92, 157, 206);
   font-size: 16px;
   padding: 5px 10px;
   margin: 0 0 0 30px;
@@ -282,7 +282,7 @@ h6 {
 .header .cta-btn:hover,
 .header .cta-btn:focus:hover {
   color: #fff;
-  background: #FFC0CB;
+  background: #7fc9eb;
 }
 
 /*--------------------------------------------------------------
@@ -516,7 +516,7 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  color: #FFC0CB;
+  color: #f9f9fa;
   border-color: var(--accent-color);
 }
 
@@ -633,7 +633,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background-color: #ff6fa1;
+  background-color: rgba(92, 157, 206);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -642,12 +642,12 @@ h6 {
 
 .scroll-top i {
   font-size: 40px;
-  color: #FFC0CB;
+  color: #7fc9eb;
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, #ff6fa1, transparent 25%);
+  background-color: color-mix(in srgb, rgb(92, 157, 206), transparent 25%);
   color: var(--contrast-color);
 }
 
@@ -862,11 +862,11 @@ section,
   margin: 10px;
   border-radius: 5px;
   color: #fff;
-  background: #ff6fa1;
+  background: rgb(92, 157, 206);
 }
 
 .hero .btn-get-started:hover {
-  background: color-mix(in srgb, #ff6fa1 90%, white 15%);
+  background: color-mix(in srgb, rgb(92, 157, 206) 90%, white 15%);
 }
 
 .hero .carousel-control-prev {
@@ -894,7 +894,7 @@ section,
   background: none;
   font-size: 26px;
   line-height: 0;
-  background: #ff6fa1;
+  background: rgb(92, 157, 206);
   border-radius: 50px;
   color: #fff;
   transition: 0.3s;
@@ -1042,14 +1042,14 @@ section,
   border-radius: 4px;
   transition: 0.3s;
   margin: 10px;
-  border: 2px #ff6fa1;
+  border: 2px rgb(92, 157, 206);
   color: #fff;
 }
 
 .call-to-action .cta-btn:hover {
-  background: #FFC0CB;
+  background: #7fc9eb;
   color: #fff;
-  border: 2px solid #ff6fa1;
+  border: 2px solid rgb(92, 157, 206);
 }
 
 /*--------------------------------------------------------------
@@ -1291,13 +1291,13 @@ section,
   width: 100%;
   height: 300px;      /* same size for all */
   object-fit: fill;
-  border-bottom: 3px solid #ff6fa1; /* blue accent */
+  border-bottom: 3px solid rgb(92, 157, 206); /* blue accent */
 }
 
 .service-item h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #ff6fa1;
+  color: rgb(92, 157, 206);
   margin: 15px 20px 10px;
   text-align: center;
 }
@@ -1413,7 +1413,7 @@ section,
 }
 
 .appointment .php-email-form button[type=submit] {
-  background: #ff6fa1;
+  background: rgb(92, 157, 206);
   border: 0;
   padding: 10px 30px;
   color: #fff;
@@ -1422,7 +1422,7 @@ section,
 }
 
 .appointment .php-email-form button[type=submit]:hover {
-  background: #FFC0CB;
+  background: #7fc9eb;
 }
 
 /*--------------------------------------------------------------
@@ -1701,7 +1701,7 @@ section,
 }
 
 .pricing .btn-buy {
-  background: #ff6fa1;
+  background: rgb(92, 157, 206);
   color: #fff;
   display: inline-block;
   padding: 8px 35px 10px 35px;
@@ -1895,7 +1895,7 @@ section,
 
 .contact .php-email-form button[type=submit] {
   color: #fff;
-  background: #ff6fa1;
+  background: rgb(92, 157, 206);
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;
@@ -1903,7 +1903,7 @@ section,
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #FFC0CB;
+  background: #7fc9eb;
 }
 
 /*--------------------------------------------------------------
@@ -1974,7 +1974,7 @@ section,
 }
 
 .branding .logo h4 strong {
-  color: #1977cc !important;
+  color: rgb(92, 157, 206) !important;
 }
 /* ===== Responsive header + topbar layout fixes ===== */
 @media (max-width: 767.98px) {
