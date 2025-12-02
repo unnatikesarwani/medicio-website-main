@@ -1514,7 +1514,6 @@ section,
 
   .tabs .nav-link.active {
     color: var(--accent-color);
-    background: var(--accent-color);
   }
 }
 
