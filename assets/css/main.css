@@ -2007,6 +2007,15 @@ section,
 .branding .logo h4 strong {
   color: rgb(92, 157, 206) !important;
 }
+
+.service-img {
+  width: 100%;
+  max-width: 380px;        /* Controls equal width */
+  height: 280px;           /* Controls equal height */
+  object-fit: cover;       /* Ensures proper cropping */
+  border-radius: 8px;
+}
+
 /* ===== Responsive header + topbar layout fixes ===== */
 @media (max-width: 767.98px) {
   /* Make topbar items visible and adjust layout */
