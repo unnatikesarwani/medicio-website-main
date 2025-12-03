@@ -292,7 +292,8 @@ h6 {
 @media (min-width: 120px) {
   .navmenu {
     padding: 0;
-    margin-left: 90px;
+    margin-right: 320px;
+    
   }
 
   .navmenu ul {
@@ -1274,7 +1275,7 @@ section,
   font-weight: 700;
   line-height: 40px;
   margin-bottom: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
   font-size: 22px;
   transition: 0.3s;
   position: relative;
@@ -2036,11 +2037,6 @@ section,
   .branding .container {
     justify-content: space-between !important;
     align-items: center;
-  }
-
-  /* Push nav items to the right */
-  .navmenu {
-    margin-left: auto;
   }
 
   /* Hamburger menu at the top-right corner */
