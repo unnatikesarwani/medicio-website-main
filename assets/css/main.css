@@ -570,10 +570,20 @@ h6 {
 .footer .footer-contact p {
   margin-bottom: 5px;
 }
-
 .footer .copyright {
-  padding: 25px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    background-color: var(--accent-color); /* same blue as topbar */
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.footer .copyright a {
+    color: #fff;
+}
+
+.footer .copyright a:hover {
+    color: #dce8ff;
 }
 
 .footer .copyright p {
@@ -663,12 +673,12 @@ h6 {
 
 .scroll-top i {
   font-size: 40px;
-  color: #7fc9eb;
+  color: #fff;
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, rgb(92, 157, 206), transparent 25%);
+  background-color: color-mix(in srgb, rgb(92, 157, 206), transparent 10%);
   color: var(--contrast-color);
 }
 
